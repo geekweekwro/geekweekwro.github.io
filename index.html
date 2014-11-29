@@ -1,6 +1,47 @@
-<html>
-<body>
-  <h1>Geek Week Wrocław</h1>
-  <p>... coming soon</p>
+<!doctype html>
+<html ng-app="geekWeekApp">
+
+<head>
+    <title>Geek Week Wro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootsrap.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js" type="application/javascript"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body ng-controller="GeekWeekCtrl">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <h1 class="label-center">GeekWeekWro</h1>
+            <!--<div class="navbar-header">
+                Szukaj:
+                <input ng-model="query">Sortuj:
+                <select ng-model="orderGroup">
+                    <option value="name">Alfabetycznie</option>
+                    <option value="age">Najnowsze</option>
+                </select>
+            </div>-->
+        </div>
+        <!--<div class="btn btn-lg btn-info allGroup" ng-click="showGroup=!showGroup">Grupy zawodowe</div>-->
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="groups center-block">
+            <div ng-repeat="group in groups | filter:query | orderBy:orderGroup">
+                <!--<span>{{group.name}}</span>-->
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <a href="{{group.url}}" target="_blank" align="left" alt="{{group.name}}">
+                            <img src="{{group.logo}}" />
+                        </a>
+                        <br/>{{group.description}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
