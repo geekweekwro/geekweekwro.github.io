@@ -12,45 +12,70 @@
 <body ng-controller="GeekWeekCtrl">
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
-            <!--<div class="navbar-header">
-                Szukaj:
-                <input ng-model="query">Sortuj:
-                <select ng-model="orderGroup">
-                    <option value="name">Alfabetycznie</option>
-                    <option value="age">Najnowsze</option>
-                </select>
-            </div>-->
             <div class="row">
                 <div class="col-md-8">
                     <h1 class="label-center">GeekWeekWro</h1>
                 </div>
                 <div class="col-md-4 text-right">
-                    <a href="http://www.facebook.com/geekweekwro">
+                    <a href="http://www.facebook.com/geekweekwro" target="_blank">
                         <img src="content/FacebookLogo.png" />
                     </a>
-                    <a href="https://twitter.com/GeekWeekWro">
+                    <a href="https://twitter.com/GeekWeekWro" target="_blank">
                         <img src="content/TwitterLogo.png" />
                     </a>
                 </div>
             </div>
+            <div class="btn btn-lg btn-info" ng-click="selected=1">Grupy zawodowe</div>
+            <div class="btn btn-lg btn-info" ng-click="selected=2">O GeekWeekWro</div>
         </div>
-        <!--<div class="btn btn-lg btn-info allGroup" ng-click="showGroup=!showGroup">Grupy zawodowe</div>-->
     </nav>
 
+    <div ng-show="selected == 1">
 
-    <div class="container-fluid">
-        <div class="groups center-block">
-            <div ng-repeat="group in groups | filter:query | orderBy:orderGroup">
-                <!--<span>{{group.name}}</span>-->
-                <div class="panel panel-primary">
+        <div class="row well">
+            <div class="col-md-4">Szukaj:
+                <input ng-model="query">
+            </div>
+            <div class="col-md-4">Sortuj:
+                <select ng-model="orderGroup">
+                    <option value="name">Alfabetycznie</option>
+                    <option value="age">Najnowsze</option>
+                </select>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="container-fluid groups center-block">
+
+                <div ng-repeat="group in groups | filter:query | orderBy:orderGroup">
+                    <!--<span>{{group.name}}</span>-->
                     <div class="panel-body">
-                        <a href="{{group.url}}" target="_blank" align="left" alt="{{group.name}}">
-                            <img src="{{group.logo}}" />
-                        </a>
-                        <br/>{{group.description}}
+                        <div class="text-center">
+                            <a href="{{group.url}}" target="_blank" align="left" alt="{{group.name}}">
+                                <img src="{{group.logo}}" />
+                            </a>
+                        </div>
+                        <div class="text-justify">
+                            {{group.description}}
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" ng-show="selected == 2">
+        <div class="about center-block">
+            <p class="text-justify">Wrocław jest nazywany Doliną Krzemową w Polsce. To własnie tutaj można zdobyć wiedzę z każdej dziedziny technologicznej, jaką sobie wymarzą na spotkaniach lokalnych grup społecznościowych. A jeżeli takiej grupy nie ma? To z dużym prawdopodobieństwem możemy stwierdzić, że taka grupa powstanie!
+            </p>
+            <p class="text-justify">Dlatego też postanowiliśmy zorganizować GeekWeekWro!</p>
+            <p class="text-justify">Codzienie, od 19 do 24 stycznia 2015 odbędą się spotkania grup, na których zdobędziecie ogrom wiedzy!</p>
+            <p class="text-justify">GeekWeekWro jest inicjatywą non-profit. Jeżeli chcecie zostać sponsorem inicjatywy, objąć ją patronatem albo znasz jakieś grupy społęcznościowe, któe powinny wziąć udział w GeekWeekWro, napisz koniecznie do nas!</p>
+            <a href="http://www.facebook.com/gosia.borzecka" target="_blank" alt="Gosia Borzęcka">
+                <img src="content/GBorzecka.jpg" align="middle" />
+            </a>
+            <a href="http://www.facebook.com/mpraglowski" target="_blank" alt="Mirek Pragłowski">
+                <img src="content/MPraglowski.jpg" align="middle" />
+            </a>
         </div>
     </div>
 
