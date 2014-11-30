@@ -9,7 +9,14 @@
                 'logo': 'content/witLOGO.png',
                 'url': 'http://www.womenintechnology.pl',
                 'age': 1
-        }
+        },
+            {
+                'name': 'Wroc.NET',
+                'description': 'Wrocławska Grupa .Net jest inicjatywą pasjonatów technologii .NET z Wrocławia i okolic. Celem grupy jest pogłębienie szeroko pojętego rozwoju własnej osoby poprzez wymianę doświadczeń, zdobywanie nowej wiedzy jak i umocnienie tej już istniejącej związanej z technologiami firmy Microsoft. Spotkania grupy są otwarte dla wszystkich, bezpłatne i odbywają się raz w miesiącu. W ramach spotkań odbywają się prelekcje, dyskusje oraz warsztaty',
+                'logo': 'content/wrocnetLogo.jpg',
+                'url': 'http://www.meetup.com/wrocnet/',
+                'age': 2
+            }
     ];
 
         $scope.orderGroup = 'age';
