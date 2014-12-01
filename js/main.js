@@ -16,6 +16,13 @@
                 'logo': 'content/wrocnetLogo.jpg',
                 'url': 'http://www.meetup.com/wrocnet/',
                 'age': 2
+            },
+            {
+                'name': 'Wrocław Symfony Group',
+                'description': 'Wrocław Symfony Group to cykliczne spotkania dla osób zainteresowanych frameworkiem Symfony. Praktycy dla praktyków oraz osób chcących zacząć swoją przygodę z Symfony. ',
+                'logo': 'content/wsgLogo.png',
+                'url': 'http://wsg.wroclaw.pl',
+                'age': 3
             }
     ];
 
