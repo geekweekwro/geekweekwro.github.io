@@ -30,6 +30,13 @@
                 'logo': 'content/plssugLogo.png',
                 'url': 'http://plssug.org.pl/',
                 'age': 4
+            },
+            {
+                'name': 'DDD, Domian Driven Design',
+                'description': 'Grupa DDD to grupa osób zainteresowana nauką oraz adaptacją Domain-Driven Design. Jej celem jest dzielenie się wiedzą, pomysłami czy doświadczeniem oraz wypromowaniem DDD we Wrocławiu.',
+                'logo': 'content/DDDLogo.jpeg',
+                'url': 'http://www.meetup.com/DDD-WRO/',
+                'age': 5
             }
     ];
 
