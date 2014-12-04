@@ -26,7 +26,8 @@
                 </div>
             </div>
             <div class="btn btn-lg btn-info" ng-click="selected=1">Grupy zawodowe</div>
-            <div class="btn btn-lg btn-info" ng-click="selected=2">O GeekWeekWro</div>
+            <div class="btn btn-lg btn-info" ng-click="selected=2">Partnerzy medialni</div>
+            <div class="btn btn-lg btn-info" ng-click="selected=3">O GeekWeekWro</div>
         </div>
     </nav>
 
@@ -62,8 +63,29 @@
             </div>
         </div>
     </div>
+    
+        <div ng-show="selected == 2">
+        <div class="panel panel-primary">
+            <div class="container-fluid center-block">
 
-    <div class="container-fluid" ng-show="selected == 2">
+                <div ng-repeat="partner in partners | filter:query | orderBy:orderGroup">
+                    <!--<span>{{group.name}}</span>-->
+                    <div class="panel-body">
+                        <div class="text-center">
+                            <a href="{{partner.url}}" target="_blank" align="left" alt="{{partner.name}}">
+                                <img src="{{partner.logo}}" />
+                            </a>
+                        </div>
+                        <div class="text-justify">
+                            {{partner.description}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" ng-show="selected == 3">
         <div class="about center-block">
             <p class="text-justify">Wrocław jest nazywany Doliną Krzemową w Polsce. To własnie tutaj można zdobyć wiedzę z każdej dziedziny technologicznej, jaką sobie wymarzą na spotkaniach lokalnych grup społecznościowych. A jeżeli takiej grupy nie ma? To z dużym prawdopodobieństwem możemy stwierdzić, że taka grupa powstanie!
             </p>

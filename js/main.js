@@ -41,8 +41,17 @@
     ];
 
         $scope.orderGroup = 'age';
+        
+        $scope.partners = [
+            {
+                'name': 'IdeaPlace',
+                'description': 'IdeaPlace to pierwsza we Wrocławiu profesjonalna przestrzeń coworkingowa dla osób przedsiębiorczych, dynamicznych i niezależnych. To biuro dla freelancerów działających w terenie. Daje możliwość wykorzystania wszystkich zalet pracy biurowej przy jednoczesnym braku zobowiązań. Dzięki profesjonalnemu sekretariatowi, nowoczesnemu zapleczu technicznemu i unikalnej, twórczej atmosferze doskonale nadaje się do indywidualnej pracy oraz korzystania z zalet pracy w zespole. IdeaPlace wykorzystuje ideę coworkingu, pozwalając tym samym w towarzystwie innych coworkerów swobodnie rozwijać każdą ideę.',
+                'logo': 'content/ideaplaceLogo.png',
+                'url': 'http://ideaplace.pl/'
+            }
+        ];
 
     });
-
+    
 
 }());
