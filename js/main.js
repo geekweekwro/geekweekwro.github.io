@@ -37,6 +37,13 @@
                 'logo': 'content/DDDLogo.jpeg',
                 'url': 'http://www.meetup.com/DDD-WRO/',
                 'age': 5
+            },
+            {
+                'name': 'AngularJS',
+                'description': 'AngularJsWrocław to grupa osób, która jest zafascynowana frameworkiem AngularJS we Wrocławiu. Organizują swoje spotkania w każdy trzeci wtorek miesiąca. ',
+                'logo': 'content/ngJsLogo.jpg',
+                'url': 'http://www.meetup.com/AngularJS-Wroc%C5%82aw/',
+                'age': 6
             }
     ];
 
