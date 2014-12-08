@@ -13,8 +13,8 @@
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-8">
-                    <h1 class="label-center">GeekWeekWro</h1>
+                <div class="col-md-4 text-center" >
+                    <img src="content/GeekWeekLogoSmall.jpg"/>
                 </div>
                 <div class="col-md-4 text-right">
                     <a href="http://www.facebook.com/geekweekwro" target="_blank">
@@ -25,9 +25,12 @@
                     </a>
                 </div>
             </div>
-            <div class="btn btn-lg btn-info" ng-click="selected=1">Grupy zawodowe</div>
-            <div class="btn btn-lg btn-info" ng-click="selected=2">Partnerzy medialni</div>
-            <div class="btn btn-lg btn-info" ng-click="selected=3">O GeekWeekWro</div>
+            <div ng-init="selected=1">
+            <div class="btn btn-lg btn-success" ng-click="selected=1">Grupy zawodowe</div>
+            <div class="btn btn-lg btn-success" ng-click="selected=2">Partnerzy medialni</div>
+            <div class="btn btn-lg btn-success" ng-click="selected=3">Sponsorzy</div>
+            <div class="btn btn-lg btn-success" ng-click="selected=4">O GeekWeekWro</div>
+            </div>
         </div>
     </nav>
 
@@ -84,8 +87,29 @@
             </div>
         </div>
     </div>
+    
+    <div ng-show="selected == 3">
+        <div class="panel panel-primary">
+            <div class="container-fluid center-block">
 
-    <div class="container-fluid" ng-show="selected == 3">
+                <div ng-repeat="sponsor in sponsors | filter:query | orderBy:orderGroup">
+                    <!--<span>{{group.name}}</span>-->
+                    <div class="panel-body">
+                        <div class="text-center">
+                            <a href="{{sponsor.url}}" target="_blank" align="left" alt="{{sponsor.name}}">
+                                <img ng-src="{{sponsor.logo}}" />
+                            </a>
+                        </div>
+                        <div class="text-justify">
+                            {{sponsor.description}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" ng-show="selected == 4">
         <div class="about center-block">
             <p class="text-justify">Wrocław jest nazywany Doliną Krzemową w Polsce. To własnie tutaj można zdobyć wiedzę z każdej dziedziny technologicznej, jaką sobie wymarzą na spotkaniach lokalnych grup społecznościowych. A jeżeli takiej grupy nie ma? To z dużym prawdopodobieństwem możemy stwierdzić, że taka grupa powstanie!
             </p>

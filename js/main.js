@@ -57,6 +57,15 @@
                 'url': 'http://ideaplace.pl/'
             }
         ];
+        
+        $scope.sponsors = [
+            {
+                'name': 'Appformation',
+                'description': '',
+                'logo': 'content/appformationLogo.png',
+                'url': 'http://www.appformation.pl/'
+            }
+        ];
 
     });
     
