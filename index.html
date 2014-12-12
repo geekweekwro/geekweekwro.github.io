@@ -1,131 +1,156 @@
-<!doctype html>
-<html ng-app="geekWeekApp">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+    <title>GeekWeekWro</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	  <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+		<header class="clearfix">
+		    <div class="logo col-md-3"><img src="img/logo.png"></div>
+		    <nav class="clearfix">
+            <ul class="clearfix">
+                 <li><a href="index.html" class="active">home</a></li>
+                <li><a href="grupy_zawodowe.html">grupy zawodowe</a></li>
+                
+                <li><a href="http://www.facebook.com/geekweekwro">Facebook</a></li>
+                <li><a href="https://twitter.com/GeekWeekWro">Twitter</a></li>
 
-<head>
-    <title>Geek Week Wro</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootsrap.css">
-</head>
-
-<body ng-controller="GeekWeekCtrl">
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
+            </ul>
+        </nav>
+        <img style="position: absolute; right:60px;top:35px;" src="img/logo_pgs.png">
+        <div class="pullcontainer">
+        <a href="#" id="pull"><i class="fa fa-bars fa-2x"></i></a>
+        </div>     
+		</header>
+    <div class="banner">
+    <ul>
+        <li style="background-image: url('img/01.jpg');">
+          <div class="container">
             <div class="row">
-                <div class="col-md-4 text-center">
-                    <img src="content/GeekWeekLogoSmall.jpg" />
+              <div class="col-md-6 col-md-offset-3">
+                <div class="hero-title">
+                  Polska Dolina Krzemowa...
                 </div>
-                <div class="col-md-4 text-right">
-                    <a href="http://www.facebook.com/geekweekwro" target="_blank">
-                        <img src="content/FacebookLogo.png" />
-                    </a>
-                    <a href="https://twitter.com/GeekWeekWro" target="_blank">
-                        <img src="content/TwitterLogo.png" />
-                    </a>
-                </div>
+              <p class="hero-content">Witaj na stronie projektu GeekWeekWro!</p>
+              
+              </div>
             </div>
-            <div ng-init="selected=1">
-                <div class="btn btn-lg btn-success" ng-click="selected=1">Grupy zawodowe</div>
-                <div class="btn btn-lg btn-success" ng-click="selected=2">Partnerzy medialni</div>
-                <div class="btn btn-lg btn-success" ng-click="selected=3">Sponsorzy</div>
-                <div class="btn btn-lg btn-success" ng-click="selected=4">O GeekWeekWro</div>
-            </div>
-        </div>
-    </nav>
+          </div>
+        </li>
 
-    <div ng-show="selected == 1">
-
-        <div class="row well">
-            <div class="col-md-4">Szukaj:
-                <input ng-model="query">
-            </div>
-            <!--<div class="col-md-4">Sortuj:
-                <select ng-model="orderGroup">
-                    <option value="name">Alfabetycznie</option>
-                   <option value="age">Najnowsze</option>
-                </select>
-            </div>-->
+       
+        
+    </ul>
+</div><div class="arrow"></div>
+<div class="text-inter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Wrocław jest nazywany Doliną Krzemową w Polsce. </h3>
+          <p>To własnie tutaj można zdobyć wiedzę z każdej dziedziny technologicznej, jaką sobie wymarzą na spotkaniach lokalnych grup społecznościowych. A jeżeli takiej grupy nie ma? To z dużym prawdopodobieństwem możemy stwierdzić, że taka grupa powstanie!</p>
+          
+   
         </div>
-        <div class="panel panel-primary">
-            <div class="container-fluid groups center-block">
-
-                <div ng-repeat="group in groups | filter:query | orderBy:orderGroup">
-                    <!--<span>{{group.name}}</span>-->
-                    <div class="panel-body">
-                        <div class="text-center">
-                            <a href="{{group.url}}" target="_blank" align="left" alt="{{group.name}}">
-                                <img ng-src="{{group.logo}}" />
-                            </a>
-                        </div>
-                        <div class="text-justify">
-                            {{group.description}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="col-md-6">
+          <h3>Codzienie, od 19 do 24 stycznia 2015 ...</h3>
+          <p>...odbędą się spotkania grup, na których zdobędziecie ogrom wiedzy! GeekWeekWro jest inicjatywą non-profit. Jeżeli chcecie zostać sponsorem inicjatywy, objąć ją patronatem albo znasz jakieś grupy społęcznościowe, które powinny wziąć udział w GeekWeekWro, napisz koniecznie do nas!</p>
+        </div>  
+      </div>
     </div>
-
-    <div ng-show="selected == 2">
-        <div class="panel panel-primary">
-            <div class="container-fluid center-block">
-
-                <div ng-repeat="partner in partners | filter:query | orderBy:orderGroup">
-                    <!--<span>{{group.name}}</span>-->
-                    <div class="panel-body">
-                        <div class="text-center">
-                            <a href="{{partner.url}}" target="_blank" align="left" alt="{{partner.name}}">
-                                <img ng-src="{{partner.logo}}" />
-                            </a>
-                        </div>
-                        <div class="text-justify">
-                            {{partner.description}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-
-    <div ng-show="selected == 3">
-        <div class="panel panel-primary">
-            <div class="container-fluid center-block">
-
-                <div ng-repeat="sponsor in sponsors | filter:query | orderBy:orderGroup">
-                    <!--<span>{{group.name}}</span>-->
-                    <div class="panel-body">
-                        <div class="text-center">
-                            <a href="{{sponsor.url}}" target="_blank" align="left" alt="{{sponsor.name}}">
-                                <img ng-src="{{sponsor.logo}}" />
-                            </a>
-                        </div>
-                        <div class="text-justify">
-                            {{sponsor.description}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid" ng-show="selected == 4">
-        <div class="about center-block">
-            <p class="text-justify">Wrocław jest nazywany Doliną Krzemową w Polsce. To własnie tutaj można zdobyć wiedzę z każdej dziedziny technologicznej, jaką sobie wymarzą na spotkaniach lokalnych grup społecznościowych. A jeżeli takiej grupy nie ma? To z dużym prawdopodobieństwem możemy stwierdzić, że taka grupa powstanie!
-            </p>
-            <p class="text-justify">Dlatego też postanowiliśmy zorganizować GeekWeekWro!</p>
-            <p class="text-justify">Codzienie, od 19 do 24 stycznia 2015 odbędą się spotkania grup, na których zdobędziecie ogrom wiedzy!</p>
-            <p class="text-justify">GeekWeekWro jest inicjatywą non-profit. Jeżeli chcecie zostać sponsorem inicjatywy, objąć ją patronatem albo znasz jakieś grupy społęcznościowe, któe powinny wziąć udział w GeekWeekWro, napisz koniecznie do nas!</p>
-            <a href="http://www.facebook.com/gosia.borzecka" target="_blank" alt="Gosia Borzęcka">
-                <img src="content/GBorzecka.jpg" align="middle" />
-            </a>
-            <a href="http://www.facebook.com/mpraglowski" target="_blank" alt="Mirek Pragłowski">
-                <img src="content/MPraglowski.jpg" align="middle" />
-            </a>
-        </div>
+    <div class="container">
+   
     </div>
     
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js" type="application/javascript"></script>
-    <script src="js/main.js"></script>
+    
+   
+    <div class="container carousel">
+      <div class="row">
 
-</body>
+        <div class="col-md-3">
+        <div class="ca-hover">
+          <div class="carousel-img">
+            <img src="img/c01.jpg" alt="Carousel Img">
+          </div>
+          <div class="carousel-avatar av1">
+          </div>
+          <div class="carousel-content">
+            <h3>Gosia Borzęcka</h3>
+            <p></p>
+          </div>
+        <div class="overlay"></div>
+        </div>
+        </div>
 
+        <div class="col-md-3">
+        <div class="ca-hover">
+          <div class="carousel-img">
+            <img src="img/c02.jpg" alt="Carousel Img">
+          </div>
+          <div class="carousel-avatar av2">
+          </div>
+          <div class="carousel-content">
+            <h3>Mirosław Pragłowski</h3>
+            <p></p>
+          </div>
+          <div class="overlay"></div>
+        </div>
+        </div>
+
+        
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="controls">
+          <ul>
+            <li><span class="pagination active"></span></li>
+            <li><span class="pagination"></span></li>
+            <li><span class="pagination"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ 
+ 
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <h2>GeekWeekWro</h2>
+          </div>
+         <div id="partners"><a style="text-decoration:none;" href="http://madeinwro.pl/"><img src="img\partner2.png"></a><a style="text-decoration:none;" href="http://ideaplace.pl/"><img src="img\partner1.png"></a></div>
+          <div class="col-md-5">
+
+          </div>
+          <div class="col-md-3">
+           
+          </div>
+          <div class="col-md-2">
+       
+          </div>
+        </div>
+      </div>  
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/unslider.min.js"></script>
+  </body>
 </html>
