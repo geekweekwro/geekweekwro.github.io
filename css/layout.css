@@ -66,6 +66,7 @@ header .banner-text hr {
    border-color: rgba(150, 150, 150, .1);
 }
 header .banner-text img {
+  margin-right: 30px;
   vertical-align: middle;
 }
 /* header social links */
