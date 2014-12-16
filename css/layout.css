@@ -61,7 +61,9 @@ header .banner-text hr {
    border-color: #2F2D2E;
    border-color: rgba(150, 150, 150, .1);
 }
-
+header .banner-text img {
+  vertical-align: middle;
+}
 /* header social links */
 header .social {
    margin: 24px 0;
