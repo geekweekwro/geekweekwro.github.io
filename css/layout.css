@@ -126,6 +126,7 @@ header .scrolldown a:hover { color: #759e38; }
    position: fixed;
    left: 0;
    top: 0;
+   background: url(../images/overlay-bg.png) repeat;
 }
 .opaque { background-color: #333; }
 
