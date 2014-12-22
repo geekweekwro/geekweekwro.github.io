@@ -61,7 +61,8 @@ header .banner-text h3 {
     text-align: justify;
     background: url(../images/overlay-bg.png) repeat;
     -moz-border-radius: 5px;
-    border-radius: 1px;
+    border-radius: 5px;
+    padding: 20px;
 }
 header .banner-text h3 span,
 header .banner-text h3 a {
@@ -82,7 +83,7 @@ header .banner-text img {
 header .social {
     margin: 24px 0;
     padding: 0;
-    font-size: 30px;
+    font-size: 50px;
     text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
 }
 header .social li {
