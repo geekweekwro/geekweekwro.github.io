@@ -76,7 +76,7 @@
         if ((contentwidth) < '960'){
           $('#timeline').attr('src','images/timeline.png');
         } else {
-          $('#timeline').attr('src','images/timeline.png');
+          $('#timeline').attr('src','images/timeline960px.png');
         }
    }
    resize();
