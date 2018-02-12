@@ -348,7 +348,6 @@ ul#nav li.current a {
     transition: all 0.3s ease-in-out;
 }
 /* ------------------------------------------------------------------ */
-
 /* e. Media Section
 /* ------------------------------------------------------------------ */
 
@@ -379,6 +378,18 @@ ul#nav li.current a {
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+/* ------------------------------------------------------------------
+/* g. Organizers
+/* ------------------------------------------------------------------ */
+#organizers h1 {
+    font: 15px/24px'opensans-semibold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #95A3A3;
+}
+
 /* ------------------------------------------------------------------
 /* g. Testimonials
 /* ------------------------------------------------------------------ */
