@@ -74,9 +74,9 @@
         // switch timeline image
         var contentwidth = $(window).width();
         if ((contentwidth) < '960'){
-          $('#timeline').attr('src','images/timeline.png');
+          $('#timeline').attr('src','images/timeline.jpg');
         } else {
-          $('#timeline').attr('src','images/timeline960px.png');
+          $('#timeline').attr('src','images/timeline960px.jpg');
         }
    }
    resize();
