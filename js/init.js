@@ -72,12 +72,12 @@
         $('body').css({ 'width': $(window).width() })
 
         // switch timeline image
-        var contentwidth = $(window).width();
-        if ((contentwidth) < '960'){
-          $('#timeline').attr('src','images/timeline.jpg');
-        } else {
-          $('#timeline').attr('src','images/timeline960px.jpg');
-        }
+        //var contentwidth = $(window).width();
+        //if ((contentwidth) < '960'){
+        //  $('#timeline').attr('src','images/timeline.jpg');
+        //} else {
+        // $('#timeline').attr('src','images/timeline960px.jpg');
+        //}
    }
    resize();
    $(window).on('resize', function(){
