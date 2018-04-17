@@ -304,6 +304,32 @@ ul#nav li.current a {
     margin-top: 30px;
     text-align: center;
 }
+
+/* Conference */
+
+#conference {
+    background: #2B2B2B;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+#conference h1 {
+    font: 15px/24px'opensans-semibold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 48px;
+    color: #eee;
+}
+
+#conference h2 {
+    text-align: center;
+    color: #eee;
+}
+
+#conference-wrapper > img{
+	display:block;
+    margin:auto;
+}
 /* e. sponsors Section
 /* ------------------------------------------------------------------ */
 
@@ -356,6 +382,7 @@ ul#nav li.current a {
     padding-top: 90px;
     padding-bottom: 60px;
 }
+
 #mediapartners h1 {
     font: 15px/24px'opensans-semibold', sans-serif;
     text-transform: uppercase;
