@@ -762,3 +762,12 @@ footer .social-links li:first-child {
 #go-top a:hover {
     background-color: #759e38;
 }
+
+
+.community-event {
+    font-weight:bold;
+}
+
+.community-event-date {
+    font-weight:bold;
+}
